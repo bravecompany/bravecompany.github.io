@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/bravecompany/bravecompany.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 작성자정보 등록 (포스트 상단에 입력되는 author에 따라 작성자 정보를 자동으로 불러옴)
+- _authors 디렉토리에 lastname.firstname.md 이름으로 필자 정보 파일 추가
+- layout: author # 레이아웃(필수)
+- name: lastname.firstname
+- title: 한글이름
+- image: /images/author/파일명
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+>예시
+~~~
+---
+layout: author
+name: judy.kim
+title: 김혜림
+image: /images/author/judy.png
+---
+~~~
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bravecompany/bravecompany.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### _posts 디렉토리 내 파일명 작성 규칙
+파일 이름은 YYYY-MM-DD-name-of-post.md 형식으로 짓는다. ex) 2019-11-22-refactoring.md
+마크다운 파일 상단에 'Front matter' 작성
+- layout 고정
+- category의 경우, category디렉토리 하위에 해당 category.html 파일이 있어야 함
+>예시
+~~~
+---
+layout: post
+title: 'Refactoring'
+author: judy.kim
+date: 2019-10-28 13:11
+categories:[techCamp]
+tags: [refactoring]
+published : false
+---
+~~~

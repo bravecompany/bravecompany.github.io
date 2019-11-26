@@ -1,0 +1,22 @@
+body{
+    font-family: 'Nanum Gothic Coding', serif;
+    letter-spacing:-1px;
+}
+.post-meta {
+    display:inline-block;
+}
+.post-meta_old {
+    position: absolute;
+    top: 63px;
+    right: 0;
+    width: 140px;
+}
+.author-image {
+    display: block;
+    width: 60px;
+    height: 60px;
+    /*margin: 0 auto;*/
+    border-radius: 100%;
+    background: url(../images/pc/default_pic_s.png) no-repeat center;
+    background-size: cover;
+}
