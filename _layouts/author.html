@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<h2>{{page.name}}님이 작성한 글</h2>
+<div class="catalogue">
+  {% for post in site.posts %}
+  {% if post.author == page.name %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+      <div>
+        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+        <h1 class="catalogue-title">{{ post.title }}</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+          {{ post.content | strip_html | truncatewords: 30 }}
+        </p>
+
+      </div>
+    </a>
+    {% endif %}
+  {% endfor %}
+</div>
