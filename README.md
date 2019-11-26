@@ -4,7 +4,7 @@
 - layout: author # 레이아웃(필수)
 - name: lastname.firstname
 - title: 한글이름
-- image: /images/author/파일명
+- image: /assets/images/author/파일명
 
 >예시
 ~~~
@@ -12,7 +12,7 @@
 layout: author
 name: judy.kim
 title: 김혜림
-image: /images/author/judy.png
+image: /assets/images/author/judy.png
 ---
 ~~~
 
@@ -20,7 +20,9 @@ image: /images/author/judy.png
 파일 이름은 YYYY-MM-DD-name-of-post.md 형식으로 짓는다. ex) 2019-11-22-refactoring.md
 마크다운 파일 상단에 'Front matter' 작성
 - layout 고정
-- category의 경우, category디렉토리 하위에 해당 category.html 파일이 있어야 함
+- category의 경우, category디렉토리 하위에 해당 카테고리명.html 파일이 있어야 함
+- 현재 techCamp 카테고리 생성하였음 (1주차, 2주차 분리는 아직...)
+
 >예시
 ~~~
 ---
