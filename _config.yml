@@ -22,13 +22,21 @@ collections:
     permalink: /tags/:path/
     output: true
 
+# 기본값 설정
 defaults:
-- scope:
-    path: _posts
-    type: posts
+  -
+    scope:
+      path: _posts
+      type: posts
     values:
       layout: post
-      image: ""
+      author: bravecompany
+  -
+    scope:
+      path: ''
+      type: authors
+    values:
+      layout: author
 
 # Build settings
 markdown: kramdown
