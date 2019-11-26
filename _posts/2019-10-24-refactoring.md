@@ -167,9 +167,6 @@ if ($this->basePrice() > 1000) {
 } else {
   return $this->basePrice() * 0.98;
 }
-
-...
-
 function basePrice() {
   return $this->quantity * $this->itemPrice;
 }
@@ -353,7 +350,7 @@ Class Bill
 ~~~
 
 >리팩토링후
-~~~
+```PHP
 Class Bill
 {
     protected $previous_end;
@@ -381,7 +378,7 @@ Class Bill
         return $next_day->modify('+1 day');
     }
 }
-~~~
+```
 
 
 ### 3.조건문의 간결화
@@ -422,7 +419,6 @@ function disabilityAmount() {
     return 0;
   }
   // disability amount 계산
-  ...
 }
 ~~~
 
@@ -433,7 +429,6 @@ function disabilityAmount() {
     return 0;
   }
   // disability amount 계산
-  ...
 }
 ~~~
 
@@ -516,6 +511,7 @@ class CreditCardRepository
     ...
 }
 ~~~
+
 #### 5) 중첩된 조건문을 보호절로 대체(Replace Nested Conditional with Guard Clauses)
 메소드가 정상실행경로가 명확하지 않은 조건별 행동을 하고  모든 특정 경우에 보호구문(Guard Clause, 감시절)을 사용한다.
 
