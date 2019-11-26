@@ -1,4 +1,27 @@
- /* Banner */
+/* Table */
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+th {
+    padding: 15px 20px 13px 20px;
+    border-top:1px solid #e2e4ee;
+    border-bottom:1px solid #e2e4ee;
+    font-weight:500;
+    font-size:14px;
+    background-color:#f5f6f9;
+    color:#111;
+    text-align:left;
+}
+td {
+    padding:16px 20px 12px 20px;
+    font-size:14px;
+    color:#444;
+    vertical-align:top;
+    border-bottom:1px solid #e2e4ee;
+}
+
+/* Banner */
 
  #banner {
     background-color: #666666;
