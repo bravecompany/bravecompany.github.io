@@ -7,7 +7,7 @@ layout: default
     <span>Written by</span><br/>
     <div class="post-meta">
     {% assign author = site.authors | where: 'name', page.author | first %}
-    <a href="{{ site.baseurl }}/authors/{{ post.author }}">
+    <a href="{{ site.baseurl }}/authors/{{ author.name }}">
         <div class="author-image"
              {% if author.image %}style="background-image:url({{ author.image }});"{% endif %}>
         </div>
