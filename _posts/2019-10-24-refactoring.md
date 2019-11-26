@@ -140,6 +140,7 @@ function getRating() {
 $basePrice = $anOrder->basePrice();
 return $basePrice > 1000;
 ~~~
+
 >리팩토링 후
 ~~~
 return $anOrder->basePrice() > 1000;
@@ -148,6 +149,7 @@ return $anOrder->basePrice() > 1000;
 #### 4) 임시변수를 메서드 호출로 전환(Replace Temp with Query)
 - 수식의 결과를 저장하는 임시변수가 있을 때, 그 수식을 빼내어 메서드로 만든 후 임시변수 참조 부분을 전부 수식으로 교체한다. (다른 메서드에서도 호출 가능)
 - 메서드 추출을 적용하기 전에 적용되어야 한다.(지역변수가 많을수록 메서드 추출이 힘들어지므로 최대한 많은 변수를 메서드 호출로 전환해야 함)
+
 >리팩토링 전
 ~~~
 $basePrice = $this->quantity * $this->itemPrice;
@@ -157,6 +159,7 @@ if ($basePrice > 1000) {
   return $basePrice * 0.98;
 }
 ~~~
+
 >리팩토링 후
 ~~~
 if ($this->basePrice() > 1000) {
@@ -179,6 +182,7 @@ function basePrice() {
 #### 6) 임시변수 분리(Split Temporary Variable)
 - 루프 변수나 값 누적용이 아닌 임시변수에 여러 번 값이 대입될 때 각 대입마다 다른 임시변수를 사용한다.
 - 임시변수 하나를 2가지 용도로 사용하면 해당 코드는 타인이 이해하기 어려우므로 다른 임시변수를 사용해야 함
+
 >리팩토링 전
 ~~~
 $temp = 2 * ($this->height + $this->width);
@@ -186,6 +190,7 @@ echo $temp;
 $temp = $this->height * $this->width;
 echo $temp;
 ~~~
+
 >리팩토링 후
 ~~~
 $perimeter = 2 * ($this->height + $this->width);
@@ -197,6 +202,7 @@ echo $area;
 #### 7) 메서드를 메서드 객체로 대체(Replace Method with Method Object)
 긴 메서드가 있는데 지역변수 때문에 메서드 추출을 적용할 수 없는 경우에 메서드를 그 자신을 위한 객체로 바꿔 모든 지역변수가 그 객체의 필드가 되도록 한다.
 이렇게 하면, 메서드를 같은 객체 안의 여러 메서드로 분해할 수 있다.
+
 >리팩토링 전
 ~~~
 class Account
@@ -218,6 +224,7 @@ class Account
     }
 }
 ~~~
+
 >리팩토링 후
 ~~~
 class foo
@@ -256,6 +263,7 @@ class foo
 
 #### 8) 알고리즘 대체(Substitute Algorithm)
 알고리즘을 변경하고 싶을 떄, 메서드 몸체를 새 알고리즘으로 대체한다.
+
 >리팩토링 전
 ~~~
 function foundPerson(array $people){
@@ -273,6 +281,7 @@ function foundPerson(array $people){
   return "";
 }
 ~~~
+
 >리팩토링 후
 ~~~
 function foundPerson(array $people){
@@ -316,6 +325,7 @@ function foundPerson(array $people){
 
 #### 7) 외래 메서드 사용(Introduce Foreign Method)
 사용하고 있는 서버 클래스에 부가적인 메서드가 필요하지만 클래스를 수정할 수 없는 경우에는 첫 번째 인자로 서버 클래스의 인스턴스를 받는 메서드를 클라이언트에 만들어야 한다.
+
 >리팩토링전
 ~~~
 Class Bill
@@ -341,6 +351,7 @@ Class Bill
     }
 }
 ~~~
+
 >리팩토링후
 ~~~
 Class Bill
@@ -376,6 +387,7 @@ Class Bill
 ### 3.조건문의 간결화
 #### 1) 조건문 쪼개기(Decompose Conditional)
 복잡한 조건문이 있는 경우 메서드로 추출
+
 >리팩토링 전
 ~~~
 if ($date->before(SUMMER_START) || $date->after(SUMMER_END)) {
@@ -384,6 +396,7 @@ if ($date->before(SUMMER_START) || $date->after(SUMMER_END)) {
   $charge = $quantity * $summerRate;
 }
 ~~~
+
 >리팩토링 후
 ~~~
 if (isSummer($date)) {
@@ -395,6 +408,7 @@ if (isSummer($date)) {
 
 #### 2) 조건문 통합하기(Consolidate Conditional Expression)
 같은 결과값을 가진 조건문의 경우, 하나의 조건식으로 결합한다. (AND 연산자 사용)
+
 >리팩토링 전
 ~~~
 function disabilityAmount() {
@@ -411,6 +425,7 @@ function disabilityAmount() {
   ...
 }
 ~~~
+
 >리팩토링 후
 ~~~
 function disabilityAmount() {
@@ -424,6 +439,7 @@ function disabilityAmount() {
 
 #### 3) 중복된 조건식 통합하기(Consolidate Duplicate Conditional Fragments)
 같은 코드가 조건식의 모든 분기에 포함되어 있다면 조건식의 밖으로 옮긴다.
+
 >리팩토링 전
 ~~~
 if (isSpecialDeal()) {
@@ -435,6 +451,7 @@ else {
   send();
 }
 ~~~
+
 >리팩토링 후
 ~~~
 if (isSpecialDeal()) {
@@ -448,6 +465,7 @@ send();
 
 #### 4) 제어플래그 제거(Remove Control Flag)
 일련의 boolean식에서 컨트롤 플래그 역할을 하는 변수가 있는 경우, break 또는 return을 대신 사용한다.
+
 >리팩토링 전
 ~~~
 class CreditCardRepository
@@ -478,6 +496,7 @@ class CreditCardRepository
     }
 }
 ~~~
+
 >리팩토링 후
 ~~~
 class CreditCardRepository
@@ -499,6 +518,7 @@ class CreditCardRepository
 ~~~
 #### 5) 중첩된 조건문을 보호절로 대체(Replace Nested Conditional with Guard Clauses)
 메소드가 정상실행경로가 명확하지 않은 조건별 행동을 하고  모든 특정 경우에 보호구문(Guard Clause, 감시절)을 사용한다.
+
 >리팩토링 전
 ~~~
 function getPayAmount() {
@@ -518,6 +538,7 @@ function getPayAmount() {
   return $result;
 }
 ~~~
+
 >리팩토링 후
 ~~~
 function getPayAmount() {
@@ -537,6 +558,7 @@ function getPayAmount() {
 #### 6) 조건문을 재정의로 전환(Replace Conditional with Polymorphism)
 - 객체에 타입에 따라 조건문이나 분기문을 두어 작성을 하게 되면 메서드가 길어지며 객체 타입에 따라 다른 기능을 실행하는 조건문이 있을 땐 조건문의 각 절을 하위클래스의 재정의 메소드 안으로 옮긴다.
 - 객체의 타입에 따라서 다른 행동을 하는 조건이 있다면 각 조건의 내용을 서브클래스의 메소드로 오버라이딩하도록 옮기고, 원본 메소드는 추상메소드로 변경한다.
+
 >리팩토링 전
 ~~~
 class Bird {
@@ -555,6 +577,7 @@ class Bird {
   // ...
 }
 ~~~
+
 >리팩토링 후
 ~~~
 abstract class Bird {
@@ -584,6 +607,7 @@ $speed = $bird->getSpeed();
 
 #### 7) introduce assertion
 특정부분의 코드가 프로그램의 상태에 관한 가정을 하고 있다면 그 가정을 명확한 Assert의 형태로 변경한다.
+
 >리팩토링 전
 ~~~
 function getExpenseLimit() {
@@ -592,6 +616,7 @@ function getExpenseLimit() {
     $this->primaryProject->getMemberExpenseLimit();
 }
 ~~~
+
 >리팩토링 후
 ~~~
 function getExpenseLimit() {
@@ -604,6 +629,7 @@ function getExpenseLimit() {
 ~~~
 #### 8) null객체 사용
 null검사를 null객체에 위임
+
 >리팩토링 전
 ~~~
 if ($customer === null) {
@@ -612,6 +638,7 @@ if ($customer === null) {
   $plan = $customer->getPlan();
 }
 ~~~
+
 >리팩토링 후
 ~~~
 class NullCustomer extends Customer {
@@ -645,6 +672,7 @@ $plan = $customer->getPlan();
 #### 6) 매개변수의 메서드화(Replace Parameter with Method)
 객체가 메서드(A)를 호출해서 그 결과를 다른 메서드(B)에 매개변수로 전달하는데, 결과를 매개변수로 받는 메서드(B)도 직접 메서드(A)를 호출할 수 있을 땐 매개변수를 없애고 메서드(A)를 메서드(B)가 호출하게 한다.
 (경우에 따라 값이 달라지는 함수는 적용하지 않는 것이 좋음)
+
 >리팩토링 전
 ~~~
 $basePrice = $this->quantity * $this->itemPrice;
@@ -652,6 +680,7 @@ $seasonDiscount = $this->getSeasonalDiscount();
 $fees = $this->getFees();
 $finalPrice = $this->discountedPrice($basePrice, $seasonDiscount, $fees);
 ~~~
+
 >리팩토링 후
 ~~~
 $basePrice = $this->quantity * $this->itemPrice;
@@ -676,6 +705,7 @@ function setValue($name, $value) {
   assert("Should never reach here");
 }
 ~~~
+
 >리팩토링 후
 ~~~
 function setHeight($arg) {
@@ -685,6 +715,7 @@ function setWidth($arg) {
   $this->width = $arg;
 }
 ~~~
+
 #### 9) 매개변수 대신 객체 사용(Introduce parameter object)
 여러 개의 매개변수가 항상 붙어 다닐 땐 그 매개변수들을 객체로 바꾼다.
 #### 10) 쓰기메서드 제거(Remove Setting Method)
@@ -704,6 +735,7 @@ class Employee {
   // ...
 }
 ~~~
+
 >리팩토링 후
 ~~~
 class Employee {
@@ -741,6 +773,7 @@ class Manager extends Employee {
   // ...
 }
 ~~~
+
 >리팩토링 후
 ~~~
 class Manager extends Employee {
@@ -751,6 +784,7 @@ class Manager extends Employee {
   // ...
 }
 ~~~
+
 #### 4) 서브클래스로 메서드 이동(Push Down Method)
 수퍼클래스에 있는 동작이 서브클래스 중 일부에만 관련되어 있다면, 그 동작을 관련된 서브클래스로 이동시킨다.
 #### 5) 서브클래스로 필드 이동(Push Down Field)
@@ -787,6 +821,7 @@ function includes($arg) {
 }
 ~~~
 >리팩토링 후
+
 ~~~
 private $low;
 private $high;
@@ -820,6 +855,7 @@ function potentialEnergy($mass, $height) {
   return $mass * $height * 9.81;
 }
 ~~~
+
 >리팩토링 후
 ~~~
 define("GRAVITATIONAL_CONSTANT", 9.81);
@@ -832,26 +868,4 @@ function potentialEnergy($mass, $height) {
 #### 추천사이트
 1)[리팩토링_정리](https://refactoring.guru/smells/duplicate-code)
 2)[refactoring GURU](https://refactoring.guru/extract-method)
-
-리팩토링이라는게 기존의 기능을 그대로 유지하면서, 유연한 시스템 구조로 변화 시키는거라 하면 좋지요. 다만, 리팩토링 자체에 목적을 두면 리팩토링만 계속하게 되는 무한작업이 반복된다고 봅니다. 몇가지 룰을 정해서 하시면 많은 도움이 될듯 합니다.
-
-가령 이것저것 많은 책임을 가진 갓 클래스가 있다면, 기능별로 클래스를 분리하고,
-변수명이나 함수명이 모호할때는 분명한 의미를 가지도록 변경해주고,
-주석은 되도록 적게 달고(변수명 함수명 자체가 주석의 의미를 가지게 하면 됩니다.
-코드는 계속 변하는데 주석은 잘 고치지 않는 경향이 있다면, 주석 과 코드의 불일치로
-공황상태에 빠지게 되니 명확한 의미를 가진 명명법이 주석을 대체하면 더 좋다고 봅니다.)
-
-또한, 상속받은 하위 클래스마다 기능을 제 각각으로 구현해야 한다면,
-인터페이스로 동작하도록, 인터페이스 중심의 코드를 만들고,
-반대로 하위 클래스가 무진장 생겨난다면 상위 클래스로 핵심 기능을 옮겨 템플릿클래스 동작하게 하고, 복잡한 코드는 간결하게 분리하며, 중복된 코드는 제거
-(처음에는 중복 코드를 생각하지 않고 코딩하다가, 중복이 된다고 생각하면 그때 리팩토링하시면 됩니다.)하시면 됩니다.
-
-또한, 제일 중요한게 테스트가 꼭 필요합니다. TDD를 꼭 하라는게 아니고, 리팩토링한 코드가 기존의 기능대로 돌아가는가를 반드시 확인해야 합니다. 그렇지 않다면, 사이드 이펙트로 곤란한 경우를 겪게 되니깐요.
-
-여담으로 OOP가 객체지향 관점이라고 모델 중심적으로 생각하기 보단, 책임(기능) 중심으로 생각하고 리팩토링 하시면 좋습니다.
-기본 서적에 CAR 예제는 좀 잘못 되었다고 봅니다.(바퀴, 속도, 엔진...자동차, 자동차 상속받은 버스, 자동차 상속받은 승용차 -_-;; ....) 객체는 어떠한 책임(기능)을 제공하는가(수행하는가)에 맞춰서 OOP 해야 하지, 데이터를 담고 있는 그릇으로 생각한다면, 모양새가 복잡해질수 밖에 없습니다.
-
-1. 기존 코드의 기능을 유지하데, 아키텍트만 바꿔 간다. (계속 적용하면 디자인 패턴이 절로 적용됩니다.)
-2. 기존 코드를 수정하였다면, 반드시 테스트를 거쳐 해당 기능에 저해없는가를 확인
-3. 리팩토링이 작업의 일환으로 수행하기 보단 습관화 하여 작업시 자연스럽게 진행되도록 한다. 등이 겠네요 ^^
 
