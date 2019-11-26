@@ -1,3 +1,17 @@
+## 작성
+- 문서 시작에는 Front Matter(YAML 문법)가 필수로 작성되어야 한다.(작성자 등록 및 포스트에 작성되는 내용은 하단 참고)
+- 작성되는 내용이 없어도 시작과 끝 (--- ---)은 작성되어야 한다.
+
+>예시
+~~~
+---
+layout: author
+name: judy.kim
+title: 김혜림
+image: /assets/images/author/judy.png
+---
+~~~
+
 
 ### 작성자정보 등록 (포스트 상단에 입력되는 author에 따라 작성자 정보를 자동으로 불러옴)
 - _authors 디렉토리에 lastname.firstname.md 이름으로 필자 정보 파일 추가
@@ -31,7 +45,6 @@ title: 'Refactoring'
 author: judy.kim
 date: 2019-10-28 13:11
 categories:[techCamp]
-tags: [refactoring]
-published : false
+tags: [refactoring, test]
 ---
 ~~~
