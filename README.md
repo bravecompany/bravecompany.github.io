@@ -62,3 +62,7 @@ html
 md
 ![이미지]({{'/assets/images/logo_1812.png'| absolute_url}})
 ```
+
+
+### 참고
+[Kramdown문법] (http://gjchoi.github.io/env/Kramdown(%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)-%EC%82%AC%EC%9A%A9%EB%B2%95/)
