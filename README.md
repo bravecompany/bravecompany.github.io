@@ -56,7 +56,6 @@ permalink: /blog/:title
 - 이미지 경로 : {{'/assets/images/logo_1812.png'| absolute_url}}
 - _posts 콜렉션 디렉토리 내에서는 해당 형식을 따르지 않는 파일들은 jekyll에 의해서 변환 및 생성되지 않는 것 같음 (posts)  
    (최종적으로 _site 디렉토리에 생성된 파일들이 쌓이고 이를 호출하는 url에 따라 보여주는 식인데 _site에 생성되지 않아 해당 이미지를 호출할 수 없다.)
-- 콜렉션 디렉토리
 ```HTML
 html
 <img src="{{'/assets/images/logo_1812.png'| absolute_url}}" width="70%" height="70%" title="" alt=""/>
