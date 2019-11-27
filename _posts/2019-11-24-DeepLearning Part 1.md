@@ -18,7 +18,7 @@ comments: true
 ----------------
 ##### 머신러닝(딥러닝)으로 무엇을 해결하려고 하는가?
 > 주어진 데이타에 가장 근접한 Y=wX+b의 방정식의 w(Weight),b(Bias)값을 찾아라
-<img src="luke_image/그래프.png" width="70%" height="70%" title="" alt=""></img>
+<img src="{{'/assets/post_assets/post1/그래프.png'}}" width="70%" height="70%" title="" alt=""></img>
     * X는 형태와 성격 따라 Input variable, feature 등으로 불려집니다.
     * X는 스칼라 값(1차원) 이기도 하고, 벡터값(2차원) 이기도 하고, 그 이상의 차수를 가진 다차원행렬(Tensor)일 수도 있습니다.
     * w는 feature들에 주어지는 가중치(Weight) 값이며, 
@@ -38,7 +38,7 @@ comments: true
 
 모델의 구성 (딥러닝 모델은 어떻게 구성되어 있나?)
 --------
-<img src="luke_image/image2.png" width="70%" height="70%" title="" alt=""></img>
+<img src="{{'/assets/post_assets/post1/image2.png'}}" width="70%" height="70%" title="" alt=""></img>
 
 ##### Model의 구성
    + Feature Extraction Layers
@@ -51,14 +51,14 @@ comments: true
    + SoftMax Layer : 확률로 결과값 Normalization
 
 ##### 잘아려진 Model의 사례
-<img src="luke_image/image3.png" width="70%" height="70%" title="" alt=""></img>
+<img src="{{'/assets/post_assets/post1/image3.png'}}" width="70%" height="70%" title="" alt=""></img>
 
-<img src="luke_image/image4.png" width="70%" height="70%" title="" alt=""></img>
+<img src="{{'/assets/post_assets/post1/image4.png'}}" width="70%" height="70%" title="" alt=""></img>
 
 
 학습 과정 (Loss/Optimization)
 --------
-<img src="luke_image/image5.png" width="70%" height="70%" title="" alt=""></img>
+<img src="{{'/assets/post_assets/post1/image5.png'}}" width="70%" height="70%" title="" alt=""></img>
 
 
 * Loss(Cost) Function : 얼마나 틀렸는지 계산하는 함수
