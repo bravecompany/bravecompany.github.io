@@ -45,9 +45,9 @@ layout: post
 title: Refactoring
 author: judy.kim
 date: 2019-10-28 13:11
-categories:[techCamp]
+categories: [techCamp]
 tags: [refactoring]
-published : true
+published: true
 permalink: /blog/:title
 ---
 ```
