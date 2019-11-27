@@ -71,7 +71,7 @@ Deep-Learning에 대한 이해와 Tensorflow 구조
 
 숙제! 필기체로 작성된 숫자(0~9)를 인식할 수 있는 딥런닝 코드를 작성해봅시다. 이 코드를 작성하는데 몇 라인의 코드가 필요할까요?
 
-[노브북파일] (/post_assets/luke/post1-google_mnist_sample.ipynb)
+[노브북파일] (https://bravecompany.github.io/post_assets/luke/post1-google_mnist_sample.ipynb)
 
 ----------------------
 참고자료
