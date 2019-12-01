@@ -5,38 +5,25 @@
   {% include head.html %}
 
   <body>
-    {% include navigation.html %}
-    {% include sidebar.html %}
+    <header class="site-header">
+        {% include navigation.html %}
+    </header>
 
-    {% if page.layout == 'home' %}
-    <section class="page-header" id="banner">
-        <h1 class="project-name">{{ page-title }}</h1>
-        <h2 class="project-tagline">{{ page-tagline }}</h2>
-    </section>
-    {% endif %}
 
     <main>
-      {{ content }}
+        {% if page.layout == 'home' %}
+        <div class="site-main-banner">
+            <h1 class="project-name">{{ page-title }}</h1>
+            <h2 class="project-tagline">{{ page-tagline }}</h2>
+        </div>
+        {% endif %}
+
+        <div class="site-main">
+            {{ content }}
+        </div>
     </main>
 
     {% include footer.html %}
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
   </body>
 </html>
 

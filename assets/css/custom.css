@@ -1,3 +1,54 @@
+@charset "UTF-8";
+/* font */
+@font-face { font-family: 'NotoSansCJK'; src: url("https://bravecompany.io/font/notokr-light.eot");
+  /* IE9 Compat Modes */
+src: url("https://bravecompany.io/font/notokr-light.eot?#iefix") format("embedded-opentype"), url("https://bravecompany.io/font/NotoSansKR-Light.d04dd870.woff") format("woff"), url("https://bravecompany.io/font/NotoSansKR-Light.e67b35e5.woff2") format("woff2"), url("https://bravecompany.io/font/NotoSansKR-Light.30866b92.otf") format("opentype"), url("https://bravecompany.io/font/KaiGenGothicKR-Light.ttf") format("truetype");
+  /* Safari, Android, iOS */
+font-style: normal; font-weight: 300; }
+@font-face { font-family: 'NotoSansCJK'; src: url("https://bravecompany.io/font/NotoSansCJKkr-Regular.eot");
+  /* IE9 Compat Modes */
+src: url("https://bravecompany.io/font/NotoSansCJKkr-Regular.eot?#iefix") format("embedded-opentype"), url("https://bravecompany.io/font/NotoSansKR-Regular.53e1309e.woff") format("woff"), url("https://bravecompany.io/font/NotoSansKR-Regular.4e291026.woff2") format("woff2"), url("https://bravecompany.io/font/NotoSansKR-Regular.49c56daa.otf") format("opentype"), url("https://bravecompany.io/font/KaiGenGothicKR-Regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+font-style: normal; font-weight: 400; }
+@font-face { font-family: 'NotoSansCJK'; src: url("https://bravecompany.io/font/notokr-bold.eot");
+  /* IE9 Compat Modes */
+src: url("https://bravecompany.io/font/notokr-bold.eot?#iefix") format("embedded-opentype"), url("https://bravecompany.io/font/NotoSansKR-Bold.a123e4ed.woff") format("woff"), url("https://bravecompany.io/font/NotoSansKR-Bold.c18403dd.woff2") format("woff2"), url("https://bravecompany.io/font/NotoSansKR-Bold.e6ee53a5.otf") format("opentype"), url("https://bravecompany.io/font/KaiGenGothicKR-Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+font-style: normal; font-weight: 700; }
+@font-face { font-family: 'NotoSansCJK'; src: url("https://bravecompany.io/font/NotoSansCJKkr-Black.eot");
+  /* IE9 Compat Modes */
+src: url("https://bravecompany.io/font/NotoSansCJKkr-Black.eot?#iefix") format("embedded-opentype"), url("https://bravecompany.io/font/NotoSansKR-Black.0961c58c.woff") format("woff"), url("https://bravecompany.io/font/NotoSansKR-Black.4e7476a0.woff2") format("woff2"), url("https://bravecompany.io/font/NotoSansKR-Black.aff1213b.otf") format("opentype"), url("https://bravecompany.io/font/KaiGenGothicKR-Heavy.ttf") format("truetype");
+  /* Safari, Android, iOS */
+font-style: normal; font-weight: 900; }
+@font-face { font-family: 'bravecom'; src: url("https://bravecompany.io/font/Bravecompany.eot");
+  /* IE9 Compat Modes */
+src: url("https://bravecompany.io/font/Bravecompany.eot?#iefix") format("embedded-opentype"), url("https://bravecompany.io/font/Bravecompany.woff") format("woff"), url("https://bravecompany.io/font/Bravecompany.woff2") format("woff2"), url("https://bravecompany.io/font/Bravecompany.otf") format("opentype"), url("https://bravecompany.io/font/Bravecompany.ttf") format("truetype");
+  /* Safari, Android, iOS */
+font-style: normal; }
+
+body, textarea, input, select, a, span, p {font-family: 'NotoSansCJK';color: #111;text-decoration: none;
+    /*font-size: 12px;line-height: 20px;letter-spacing: -1px;*/}
+
+/* post */
+.post-meta {
+    display:inline-block;
+}
+.post-meta_old {
+    position: absolute;
+    top: 63px;
+    right: 0;
+    width: 140px;
+}
+.author-image {
+    display: block;
+    width: 60px;
+    height: 60px;
+    /*margin: 0 auto;*/
+    border-radius: 100%;
+    background: url(https://bravecompany.io/images/pc/default_pic_s.png) no-repeat center;
+    background-size: cover;
+}
+
 /* Table */
 table{
     border-collapse:collapse;
@@ -20,6 +71,101 @@ td {
     vertical-align:top;
     border-bottom:1px solid #e2e4ee;
 }
+/* header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    height: 74px;
+    min-width: 1224px;
+    background-color:white;
+    transition: background .3s;
+}
+/* main */
+.site-main-banner {
+    min-height:340px;
+    background-color:#020b36;
+    position:relative;
+    background-image: url("../images/bannerTest.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*width:1160px;
+    margin:0 auto;
+    padding:0 32px;*/
+}
+.site-main {
+    position:relative;
+    width:1160px;
+    margin:0 auto;
+    padding:0 32px;
+    padding-top:72px;
+
+}
+
+header .nav-left {float:left; padding: 28px 0 0 32px; margin:0;}
+header .nav-right{float:right; padding-right:22px;}
+header .nav-right ul{
+    float:left;
+    padding-top:16px;
+    list-style:none;
+}
+header .nav-right ul li{
+    float:left;
+    margin-left:20px;
+}
+header .nav-right .nav-search{
+    float:left;
+    margin:17px 0 0 44px;
+    padding:10px;
+}
+
+.dropdown {
+    background-color:white;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 150px;
+    display: block;
+    right: auto;
+    padding:10px;
+    float:left;
+}
+
+/* subPages */
+.members ul { list-style: none;}
+.members li {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0 32px;
+    background: #fff;
+}
+.members li a{
+    margin-left: 20px;
+    display: block;
+    overflow: hidden;
+    padding: 39px 0 35px;
+    font-weight: 300;
+    font-size: 20px;
+    color: #111;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.members .member-image {
+    position:absolute;
+    width:164px;
+    top:40px;
+}
+
+/* Footer */
+.btn-wrap.top { position: fixed; right: 24px; bottom: 24px; z-index: 10; display: none; }
+.btn-wrap.top .btn { display: inline-block; vertical-align: middle; width: 40px; height: 40px; background: #000 url("../images/ui/top_arrow.png"); background-repeat: no-repeat; background-size: 14px auto; background-position: center center; text-indent: -9999px; }
+
+
 
 /* Banner */
 
