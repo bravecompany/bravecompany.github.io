@@ -1,4 +1,3 @@
-
 ---
 layout: author
 name: taylor.kim
