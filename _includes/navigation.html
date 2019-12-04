@@ -1,20 +1,31 @@
-<nav class="nav">
-  <div class="nav-container">
-    <a href="{{ site.baseurl }}/">
-      <h2 class="nav-title">{{ site.title }}</h2>
-    </a>
+<h2 class="nav-left"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
+<nav class="nav-right">
     <ul>
-      <!--li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li-->
-      <li><a href="{{ site.baseurl }}/category">Posts</a></li>
-      <li><input id="search-input" type="search" placeholder="Search..." value="" />
-        <img src="http://coco7846.cdn3.cafe24.com/icon/searchBtn.png" style="width:25px;height:25px;float:right;margin:0;display:inline-block;"/>
-        </li>
-    </ul>
+        <li class="has-nav"><a href="{{ site.baseurl }}/blog">blog</a>
+            <ul class="dropdown" style="display:none;">
+                {% for category in site.categories %}
+                <li><a href="/category/{{ category | first }}" class="sidebar-nav-item pl-3rem">
+                    <span class="name">
+                        {{ category | first }}
+                    </span>
+                    <span class="badge">({{ category | last | size }})</span>
+                </a>
+                </li>
+                {% endfor %}
 
-  </div>
+            </ul>
+        </li>
+
+        <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+        <li><a href="https://github.com/bravecompany/bravecompany.github.io" target="_blank">GitHub</a></li>
+    </ul>
+    <div class="nav-search">
+        <input id="search-input" type="search" placeholder="Search..." value="" />
+        <img src="http://coco7846.cdn3.cafe24.com/icon/searchBtn.png" style="width:25px;height:25px;float:right;margin:0;display:inline-block;"/>
+    </div>
 </nav>
+<!-- jekyll search -->
 <ul class="search__results" id="results-container"></ul>
-<!-- Script pointing to jekyll-search.js -->
 <script src="{{site.baseurl}}/assets/js/jekyll-search.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -28,4 +39,10 @@
         fuzzy: false,
         exclude: ['Welcome']
     })
+
+    $('.has-nav').hover(function() {
+       $('.dropdown').show();
+    }, function() {
+        $('.dropdown').hide();
+    });
 </script><!-- #header -->

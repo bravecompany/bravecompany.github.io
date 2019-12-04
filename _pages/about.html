@@ -1,0 +1,17 @@
+---
+layout: page
+title: "Bravecompany TechTeam"
+---
+
+용감한컴퍼니의 <span style="font-size:18px; font-weight:bold;">용가머</span>를 소개합니다.
+<div class="members">
+
+    <ul>
+        {% for member in site.data.members %}
+        <li><!--div class="author-image member-image"><img src="{{ member.img }}" /></div-->
+            <a href="/authors/{{member.fullname}}">{{member.name}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+
