@@ -1,5 +1,5 @@
 ---
-name: luke
+name: Luke
 title: Luke
-image: /assets/images/authors/judy.png
+image: 
 ---
