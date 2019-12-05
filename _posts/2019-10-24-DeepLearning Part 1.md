@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'DeepLearning Part 1: 딥런닝에 대하여'
-author: luke
+author: Luke
 date: 2019-10-28 13:11
 categories: [techCamp]
 tags: [ai]

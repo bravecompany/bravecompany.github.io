@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'DeepLearning Part 2: 케라스를 이용한 딥러닝 구조 정의'
-author: luke
+author: Luke
 date: 2019-10-28 13:11
 categories: [techCamp]
 tags: [ai]
