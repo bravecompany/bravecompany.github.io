@@ -9,8 +9,9 @@ comments: true
 ---
 ## 케라스를 이용한 딥러닝 구조 정의
 
-### 전체 구성도
-그림 필요
+### 전체 학습 흐름도
+<img src="https://i.imgur.com/TNPNgWf.png" title="" alt="">
+
 
 ### 모델 구성
 * Model : CNN 등, 특징을 뽑아내고, 예측을 하는 과정에 대한 정의 (함수와 비슷한의미?)
@@ -118,12 +119,6 @@ test_predictions = model.predict(normed_test_data).flatten()
 
 ```
 
-#### 기타 용어
-* Train Set: 학습지 풀기
-* Test Set: 모의고사 풀기
-
-* Label : 데이타의 정답지
-* Ground Truth : 정답?
 
 ### 레퍼런스
 [케라스 가이드] 
