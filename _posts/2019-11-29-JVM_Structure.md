@@ -83,7 +83,7 @@ JAVA의 가장 큰 특징 중 하나가 바로 어느 플랫폼, 그러니까 �
 
 ###        3. JVM 동작 원리 및 기본 개념
 
-![JVMRunTimeImage](/Users/taylor/Downloads/jvmRunTimeImage.png)
+![JVMRunTimeImage]({{'/assets/images/authors/taylor/jvmRunTimeImage.png'| absolute_url}})
 
 ​												<JRE안에 있는 JVM>
 
@@ -111,7 +111,7 @@ JAVA의 가장 큰 특징 중 하나가 바로 어느 플랫폼, 그러니까 �
 
    ####<1. 계층구조>
 
-   ![Hierarchical Structure Image](/Users/taylor/Downloads/Hierarchy.png)
+   ![Hierarchical Structure Image]({{'/assets/images/authors/taylor/Hierarchy.png'| absolute_url}})
 
    ​										 <클래스 로더 계층구조>
 
@@ -149,7 +149,7 @@ JAVA의 가장 큰 특징 중 하나가 바로 어느 플랫폼, 그러니까 �
 
 	#### 	<2. 위임모델>
 
-![mandate Image](/Users/taylor/Downloads/ManDate.png)
+![mandate Image]({{'/assets/images/authors/taylor/ManDate.png'| absolute_url}})
 
 ​											<클래스 로더 위임 모델>
 
@@ -193,7 +193,7 @@ JAVA의 가장 큰 특징 중 하나가 바로 어느 플랫폼, 그러니까 �
 
 ###<3-1 클래스 로더(Class Loader)>
 
-![Class Loader Image](/Users/taylor/Downloads/ClassLoader.png)
+![Class Loader Image]({{'/assets/images/authors/taylor/ClassLoader.png'| absolute_url}})
 
 ​												<클래스 로드 과정>
 
@@ -213,7 +213,7 @@ JAVA의 가장 큰 특징 중 하나가 바로 어느 플랫폼, 그러니까 �
 
 ####<3-2 런타임 데이터 영역(Runtime Data Area)>
 
-![Run Time Data Region Image](/Users/taylor/Downloads/RunTimeDateLocal.png)
+![Run Time Data Region Image]({{'/assets/images/authors/taylor/RunTimeDateLocal.png'| absolute_url}})
 
 ​												<런 타임 데이터 영역>
 
@@ -255,7 +255,7 @@ JVM이 OS위에서 실행되면서 할당받는 메모리 영역이 바로 런�
 
 **· JIT 컴파일러(Just-In-Time Compiler)** : 인터프리터의 단점을 보완하기 위해 도입된 방식으로 바이트 코드 전체를 컴파일하여 네이티브 코드로 변경하고 이후에는 해당 메서드를 더 이상 인터프리팅 하지 않고 네이티브 코드로 직접 실행하는 방식입니다. 하나씩 인터프리팅하여 실행하는것이 아니라 바이트 코드 전체가 컴파일된 네이티브 코드를 실행하는 것이기 때문에 전체적인 실행 속도는 인터프리팅 방식보다 빠릅니다.
 
-![Compiler Image](/Users/taylor/Downloads/Compiler.png)
+![Compiler Image]({{'/assets/images/authors/taylor/Compiler.png'| absolute_url}})
 
 ​				<자바 컴파일러(JAVA Compiler) / JIT 컴파일러(JIT Compiler)>
 
