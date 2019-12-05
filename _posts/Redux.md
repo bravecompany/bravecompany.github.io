@@ -1,11 +1,4 @@
 
---리덕스 미들웨어 설치 (thunk)
-npm install --save redux-thunk
-
---실행
-npm start
-```
-<!-->
 # app.js
 
 ``` javascript
