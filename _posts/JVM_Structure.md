@@ -1,4 +1,3 @@
-```
 ---
 layout: post
 title: JVM Structure
@@ -9,7 +8,6 @@ tags: [JAVA]
 published: true
 permalink: /blog/:JVM Structure
 ---
-```
 
 
 
