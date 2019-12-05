@@ -48,7 +48,7 @@ JAVA의 가장 큰 특징 중 하나가 바로 어느 플랫폼, 그러니까 �
    
 
    
-![StructImage](/Users/taylor/Downloads/processing.png)
+![StructImage]({{'assets/images/authors/taylor/Processing.png'| absolute_url}})
    
 이러한 특징을 구현하기 위해서는 바로 오늘의 주제인 JVM(JAVA Virtual Machine)이 필요합니다. JVM, 자바 가상 머신은 단순하게 말하면 컴파일된 코드(바이트코드)를 실행시켜주는 가상의 컴퓨터라고 생각하면 될것 같습니다.
    
