@@ -24,7 +24,7 @@ comments: false
 
 PaaS, laaS, SaaS, BaaS
 
-![paas](./AWS_Beanstalk_Setting/paas.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/paas.png)
 
 1. On-Premise
 	직접 인프라, 플랫폼, 어플리케이션을 운영하는 방식을 뜻한다.
@@ -123,30 +123,30 @@ aws_secret_access_key = USER_02_AWS_SECRET_ACCESS_KEY
 
 1. 어플리케이션 생성
 
-![paas](./AWS_Beanstalk_Setting/image.png)
-![paas](./AWS_Beanstalk_Setting/image-1.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-1.png)
 
 2. 환경 생성
 
-![paas](./AWS_Beanstalk_Setting/image-2.png)
-![paas](./AWS_Beanstalk_Setting/image-3.png)
-![paas](./AWS_Beanstalk_Setting/image-4.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-2.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-3.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-4.png)
 
 - 추가옵션 구성으로 디폴트 옵션을 아래와 같이 설정할수 있다.
   아래의 이미지 2개는 구성을 단일 인스턴스 와 고가용성을 선택하였을 시의 기본설정 값이다.
   ( 용량과 로드밸런서, 배포 설정만 상이함 )
-![paas](./AWS_Beanstalk_Setting/image-5.png)
-![paas](./AWS_Beanstalk_Setting/image-6.png)
-![paas](./AWS_Beanstalk_Setting/image-7.png)
-![paas](./AWS_Beanstalk_Setting/image-8.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-5.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-6.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-7.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-8.png)
 
 - 아래 이미지는 환경유형이 단일인스턴스 사용으로  선택되었을때이며 
   로드밸런싱 수행 선택 시, 사용할 인스컨스 개수와 가용영역, 조정트리거 등일 활성화 된다.
-![paas](./AWS_Beanstalk_Setting/image-9.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-9.png)
 
 - 로드밸런서는 구성사전설정을  고사용성으로 설정 시, 기능이 활성화 된다.
   ( API 서버 구축 시, 단일 인스턴스 사용으로 별도 로드밸런서 설정 )
-![paas](./AWS_Beanstalk_Setting/image-10.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-10.png)
 
 - 어플리케이션이 업데이트 될때 생기는 딜레이와 오류가 발생했을때에 대응하여 다음의 배포 방식이 있다
   Beanstalk에서는 아래의 배포방식 중 1~3 정책 지원.
@@ -168,80 +168,80 @@ aws_secret_access_key = USER_02_AWS_SECRET_ACCESS_KEY
    아예 새로운 환경을 만들어 직접 기존 환경과 URL 스와이핑을 통해 수동으로 업데이트해준다.
    따라서, 이전 환경과 업데이트된 환경 두개가 실행중이고 이 덕분에 빠른 롤백 및 서비스중지가 없는 배포가 가능하다.
 ```
-![paas](./AWS_Beanstalk_Setting/image-11.png)
-![paas](./AWS_Beanstalk_Setting/image-12.png)
-![paas](./AWS_Beanstalk_Setting/image-13.png)
-![paas](./AWS_Beanstalk_Setting/image-14.png)
-![paas](./AWS_Beanstalk_Setting/image-15.png)
-![paas](./AWS_Beanstalk_Setting/image-16.png)
-![paas](./AWS_Beanstalk_Setting/image-17.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-11.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-12.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-13.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-14.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-15.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-16.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-17.png)
 
 - 업로드 및 배포 기능으로 어플리케이션 소스코드를 압축하여 업로드 및 바로 배포가 가능하다
-![paas](./AWS_Beanstalk_Setting/image-18.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-18.png)
 
 - 배포된 어플리케이션 소스들이 S3에 저장되어 있어 업로드된 버전이력을 확인 할수 있으며 해당 소스로 소스배포가 가능하다
-![paas](./AWS_Beanstalk_Setting/image-19.png)
-![paas](./AWS_Beanstalk_Setting/image-20.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-19.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-20.png)
 
 3. 서비스를 위한 Beanstalk 추가 설정 
 
 - Beanstalk 구성으로 추가된 리소스 확인
-![paas](./AWS_Beanstalk_Setting/image-21.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-21.png)
 
 - 추가된 EC2 확인
-![paas](./AWS_Beanstalk_Setting/image-22.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-22.png)
 
 - 추가된 EC2의 보안그룹에 inbound rules 설정
-![paas](./AWS_Beanstalk_Setting/image-23.png)
-![paas](./AWS_Beanstalk_Setting/image-24.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-23.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-24.png)
 
 - ACM을 통해서 인증서 등록
   - 아마존 인증서 발급
   - 외부 인증서 등록
-![paas](./AWS_Beanstalk_Setting/image-25.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-25.png)
 
 - 로드밸런서에서 사용될 대상 그룹 생성하여 EC2 등록
-![paas](./AWS_Beanstalk_Setting/image-26.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-26.png)
 
 - 로드밸런서 생성
-![paas](./AWS_Beanstalk_Setting/image-27.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-27.png)
 
 - Application Load Balancer로 생성 ( 각 유형을 공부가 필요 TT )
-![paas](./AWS_Beanstalk_Setting/image-28.png)
-![paas](./AWS_Beanstalk_Setting/image-29.png)
-![paas](./AWS_Beanstalk_Setting/image-30.png)
-![paas](./AWS_Beanstalk_Setting/image-31.png)
-![paas](./AWS_Beanstalk_Setting/image-32.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-28.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-29.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-30.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-31.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-32.png)
 
 4. CodeCommit 로 소스 관리
 
 - Beanstalk에 사용될 어플리케이션 소스 리포지토리 생성
-![paas](./AWS_Beanstalk_Setting/image-33.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-33.png)
 
 - 실제 배포할 버전을 새로운 브랜치로 생성 - release
-![paas](./AWS_Beanstalk_Setting/image-34.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-34.png)
 
 5. CodePipeline로 자동 배포
 
-![paas](./AWS_Beanstalk_Setting/image-35.png)
-![paas](./AWS_Beanstalk_Setting/image-36.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-35.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-36.png)
 
 - 소스공급자를 CodeCommit로 브랜치 명을 배포를 위한 생성한 release로 설정
-![paas](./AWS_Beanstalk_Setting/image-37.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-37.png)
 
 - 빌드는 해당되지 않으므로 빌드 스테이지 건너뛰기
-![paas](./AWS_Beanstalk_Setting/image-38.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-38.png)
 
 - 공급자를 Beanstalk의 Cherang-test 환경으로 설정
-![paas](./AWS_Beanstalk_Setting/image-39.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-39.png)
 
 - 생성 완료
-![paas](./AWS_Beanstalk_Setting/image-40.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-40.png)
 
 - 배포 ( CodeCommit의 release 브랜치로 poll이 실행되면 CloudWatch가 인지하고 자동배포가 실행된다 )
-![paas](./AWS_Beanstalk_Setting/image-41.png)
+![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-41.png)
 
 
 
 
-![aws-lifecycle](./AWS_Beanstalk_Setting/aws-lifecycle.png){: width="100px" height="70px"}
+![aws-lifecycle](/assets/images/cherang/AWS_Beanstalk_Setting/aws-lifecycle.png){: width="100px" height="70px"}
