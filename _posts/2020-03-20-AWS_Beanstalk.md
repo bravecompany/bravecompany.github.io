@@ -96,6 +96,7 @@ PaaS, laaS, SaaS, BaaS
 	- 빈스톡 어플리케이션 초기화(생성): $ eb init
 	- ID / KEY 등록
 - profile 확인 : $ cat ~/.aws/config
+  
 ```
 [profile user01]
 aws_access_key_id = USER01_ACCESS_KEY_ID
@@ -105,12 +106,13 @@ aws_secret_access_key = USER_01_AWS_SECRET_ACCESS_KEY
 aws_access_key_id = USER02_ACCESS_KEY_ID
 aws_secret_access_key = USER_02_AWS_SECRET_ACCESS_KEY
 ```
+
 - 어플리케이션이 생성되었는지 콘솔에서 확인
 - 접속권한은 용도에 따라 여러개로 구성이 가능하고, eb 명령어 전체에 --profile 프로파일명 옵션을 이용해서 사용이 가능함.
 	- my-profile에 만들어진 eb목록을 불러옴 : $ eb list --profile my-profile
 
 
-3. 어플리케이션 생성 및 배포
+1. 어플리케이션 생성 및 배포
 - $ mkdir HelloWorld
 - $ cd HelloWorld
 - $ eb init -p PHP
