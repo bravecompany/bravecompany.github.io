@@ -22,10 +22,10 @@ comments: false
 
 
 
-PaaS, laaS, SaaS, BaaS
+>PaaS, laaS, SaaS, BaaS
 
 ![paas](/assets/images/cherang/AWS_Beanstalk_Setting/paas.png){: width="70%"}
-
+```
 1. On-Premise
 	직접 인프라, 플랫폼, 어플리케이션을 운영하는 방식을 뜻한다.
 2. IaaS (Infrastructure as a Service)
@@ -40,7 +40,7 @@ PaaS, laaS, SaaS, BaaS
 5. BaaS (Backend as a Service)
 	앱개발을 위해 기존의 벡엔드 서버를 구현하지 않고 사용자는 API를 통해 앱에 필요한 서비스들(Oauth, DB, Location 등..)을 제공받는 서비스
 	ex) Aws Amplify, Firebase
-
+```
 
 
 
@@ -223,6 +223,7 @@ aws_secret_access_key = USER_02_AWS_SECRET_ACCESS_KEY
 - 실제 배포할 버전을 새로운 브랜치로 생성 - release
 ![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-34.png){: width="70%"}
 
+
 5. CodePipeline로 자동 배포
 
 ![paas](/assets/images/cherang/AWS_Beanstalk_Setting/image-35.png){: width="70%"}
@@ -246,4 +247,5 @@ aws_secret_access_key = USER_02_AWS_SECRET_ACCESS_KEY
 
 
 
+# AWS 서비스의 Liftcycle
 ![aws-lifecycle](/assets/images/cherang/AWS_Beanstalk_Setting/aws-lifecycle.png){: width="70%"}
